@@ -7,8 +7,8 @@ and on TypeError exceptions, in particular those of the form:
   'BLAHType' object is not callable.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Jacob Bowman.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -129,10 +129,10 @@ def broken_1(circle, window):
       :type circle: rg.Circle
       :type window: rg.RoseWindow
     """
-    circle.attach(window)
+    circle.attach_to(window)
     circle2 = rg.Circle(circle.center(), 2 * circle.r)
-    circle2.attach(circle)
-    circle2.render()
+    circle2.attach_to(circle)
+    window.render()
 
 
 # ----------------------------------------------------------------------
