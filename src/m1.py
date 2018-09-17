@@ -9,7 +9,7 @@ import rosegraphics as rg
 
 ########################################################################
 #
-# TODO: 2. READ these instructions, ASKING QUESTIONS as needed.
+# DONE: 2. READ these instructions, ASKING QUESTIONS as needed.
 #
 #   This module contains 7 "broken" functions.
 #
@@ -312,7 +312,7 @@ def broken_6(n):
 
 
 # ----------------------------------------------------------------------
-# TODO: 9. Follow the INSTRUCTIONS AT THE TOP OF THIS MODULE
+# DONE: 9. Follow the INSTRUCTIONS AT THE TOP OF THIS MODULE
 #          to correct the mistake(s) in the following function.
 # ----------------------------------------------------------------------
 def broken_7(n, point, length, distance_between_lines, window):
@@ -341,12 +341,15 @@ def broken_7(n, point, length, distance_between_lines, window):
     left = rg.Point(point.x, point.y)
     right = rg.Point(point.x + length, point.y)
 
+    window = rg.RoseWindow(400, 400)
+
     for _ in range(n):
         line = rg.Line(left, right)
         line.attach_to(window)
         left = rg.Point(left.x, left.y + distance_between_lines)
         right = rg.Point(right.x, right.y + distance_between_lines)
         window.render(.5)
+
     window.close_on_mouse_click()
 
 
